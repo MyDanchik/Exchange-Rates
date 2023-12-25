@@ -1,12 +1,6 @@
 import UIKit
 
 class CurrencyTableViewCell: UITableViewCell {
-    
-    // MARK: - Properties
-    
-    private let backgroundColorCell = UIColor(red: 37/255, green: 35/255, blue: 51/255, alpha: 1.0)
-    private let backgroundColorView = UIColor(red: 20/255, green: 18/255, blue: 29/255, alpha: 1.0)
-    
     // MARK: - UI Elements
     
     private let customView: UIView = {
@@ -59,8 +53,8 @@ class CurrencyTableViewCell: UITableViewCell {
         ])
         
         contentView.layer.masksToBounds = true
-        contentView.backgroundColor = backgroundColorView
-        customView.backgroundColor = backgroundColorCell
+        contentView.backgroundColor = .backgroundColorView
+        customView.backgroundColor = .backgroundColorCell
         customView.layer.cornerRadius = 8
         
         nameLabel.textColor = .white

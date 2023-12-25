@@ -8,15 +8,13 @@ class CurrencyListViewController: UIViewController {
     
     private var currencies: [Currency] = []
     
-    private let backgroundColorView = UIColor(red: 20/255, green: 18/255, blue: 29/255, alpha: 1.0)
-    
     // MARK: - Lifecycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupTableView()
         fetchCurrencies()
-        view.backgroundColor = backgroundColorView
+        view.backgroundColor = .backgroundColorView
     }
     
     // MARK: - Configuration
@@ -27,7 +25,7 @@ class CurrencyListViewController: UIViewController {
         tableView.register(CurrencyTableViewCell.self, forCellReuseIdentifier: "CurrencyTableViewCell")
         tableView.rowHeight = 80
         tableView.separatorStyle = .none
-        tableView.backgroundColor = backgroundColorView
+        tableView.backgroundColor = .backgroundColorView
         tableView.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(tableView)
         
@@ -61,7 +59,7 @@ extension CurrencyListViewController: UITableViewDelegate, UITableViewDataSource
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let headerView = UIView()
-        headerView.backgroundColor = backgroundColorView
+        headerView.backgroundColor = .backgroundColorView
         
         let titleLabel: UILabel = {
             let label = UILabel()
