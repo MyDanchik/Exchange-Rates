@@ -1,6 +1,6 @@
 import UIKit
 
-class CurrencyTableViewCell: UITableViewCell {
+final class CurrencyTableViewCell: UITableViewCell {
     // MARK: - UI Elements
     
     private let customView: UIView = {
@@ -67,7 +67,7 @@ class CurrencyTableViewCell: UITableViewCell {
     
     func configure(with currency: Currency) {
         nameLabel.text = currency.name
-        if let priceUSD = currency.price_usd {
+        if let priceUSD = currency.priceUSD {
             priceLabel.text = String(format: "$%.3f", priceUSD)
         } else {
             priceLabel.text = "$0.000"

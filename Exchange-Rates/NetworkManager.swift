@@ -1,6 +1,6 @@
 import Alamofire
 
-class NetworkManager {
+final class NetworkManager {
 
     static let shared = NetworkManager()
 
@@ -9,7 +9,7 @@ class NetworkManager {
     func fetchCurrencies(completion: @escaping ([Currency]?) -> Void) {
         let url = "https://rest.coinapi.io/v1/assets"
 
-        let headers: HTTPHeaders = ["X-CoinAPI-Key": "E93E2E73-E9EE-4359-894C-4BABB9B3F06A"]
+        let headers: HTTPHeaders = ["X-CoinAPI-Key": "FA35B24B-50EC-4982-84A8-A6466ED7F6E5"]
 
         AF.request(url, headers: headers).responseDecodable(of: [Currency].self) { response in
             switch response.result {

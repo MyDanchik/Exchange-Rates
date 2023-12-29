@@ -1,10 +1,10 @@
 import UIKit
 
-class CurrencyListViewController: UIViewController {
+final class CurrencyListViewController: UIViewController {
     
     // MARK: - Properties
     
-    let tableView = UITableView()
+    private let tableView = UITableView()
     
     private var currencies: [Currency] = []
     
